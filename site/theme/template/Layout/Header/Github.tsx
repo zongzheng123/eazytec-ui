@@ -15,7 +15,7 @@ export default ({ responsive }: GithubProps) => (
       [`responsive-${responsive}`]: responsive,
     })}
     type="stargazers"
-    namespace="zongzheng123"
-    repo="zmi"
+    namespace="ant-design"
+    repo="ant-design"
   />
 );

@@ -6,7 +6,6 @@ const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
 const { ESBuildPlugin, ESBuildMinifyPlugin } = require('esbuild-loader');
 const darkVars = require('./scripts/dark-vars');
 const compactVars = require('./scripts/compact-vars');
-const eazytecVars = require('./scripts/eazytec-vars')
 
 const { webpack } = getWebpackConfig;
 
@@ -86,7 +85,6 @@ function processWebpackThemeConfig(themeConfig, theme, vars) {
 const webpackConfig = getWebpackConfig(false);
 const webpackDarkConfig = getWebpackConfig(false);
 const webpackCompactConfig = getWebpackConfig(false);
-const webpackEazytecConfig = getWebpackConfig(false)
 
 webpackConfig.forEach(config => {
   injectWarningCondition(config);
@@ -118,7 +116,6 @@ if (process.env.RUN_ENV === 'PRODUCTION') {
 
   processWebpackThemeConfig(webpackDarkConfig, 'dark', darkVars);
   processWebpackThemeConfig(webpackCompactConfig, 'compact', compactVars);
-  processWebpackThemeConfig(webpackEazytecConfig, 'eazytec', eazytecVars);
 }
 
-module.exports = [...webpackConfig, ...webpackDarkConfig, ...webpackCompactConfig, ...webpackEazytecConfig];
+module.exports = [...webpackConfig, ...webpackDarkConfig, ...webpackCompactConfig];

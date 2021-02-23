@@ -21,18 +21,13 @@ const { SubMenu } = Menu;
 
 function getModuleData(props) {
   const { pathname } = props.location;
-  let moduleName
-  if (/^\/?components/.test(pathname)) {
-    moduleName = 'components'
-  } else if (/^\/?scenes/.test(pathname)) {
-    moduleName = 'scenes'
-  } else {
-    moduleName = pathname
-    .split('/')
-    .filter(item => item)
-    .slice(0, 2)
-    .join('/')
-  }
+  const moduleName = /^\/?components/.test(pathname)
+    ? 'components'
+    : pathname
+        .split('/')
+        .filter(item => item)
+        .slice(0, 2)
+        .join('/');
   const excludedSuffix = utils.isZhCN(props.location.pathname) ? 'en-US.md' : 'zh-CN.md';
   let data;
   switch (moduleName) {

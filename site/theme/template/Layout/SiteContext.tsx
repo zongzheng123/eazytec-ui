@@ -6,7 +6,7 @@ export interface SiteContextProps {
 }
 
 const SiteContext = React.createContext<SiteContextProps>({
-  isMobile: true,
+  isMobile: false,
   direction: 'ltr',
 });
 

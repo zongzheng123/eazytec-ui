@@ -65,9 +65,9 @@ const Home = (props: { location: any }) => {
       <style dangerouslySetInnerHTML={{ __html: getStyle() }} />
       <Banner location={location} />
       <div style={{ maxWidth: 1256, margin: '0 auto' }}>
-        {/* <BlockContent title={<FormattedMessage id="app.home.recommend" />}>
+        <BlockContent title={<FormattedMessage id="app.home.recommend" />}>
           <RecommendPage />
-        </BlockContent> */}
+        </BlockContent>
 
         <BlockContent title={<FormattedMessage id="app.home.design-and-framework" />}>
           <DesignPage location={location} />
@@ -84,7 +84,7 @@ const Home = (props: { location: any }) => {
           <MorePage />
         </BlockContent>
       </div>
-      {/* <Footer location={location} /> */}
+      <Footer location={location} />
     </div>
   );
 };

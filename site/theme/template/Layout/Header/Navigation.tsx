@@ -23,7 +23,7 @@ export interface NavigationProps extends SharedProps {
 }
 
 export default ({
-  isZhCN = true,
+  isZhCN,
   isRTL,
   isMobile,
   pathname,
@@ -97,29 +97,24 @@ export default ({
           <FormattedMessage id="app.header.menu.components" />
         </Link>
       </Menu.Item>
-      <Menu.Item key="scenes">
-        <Link to={utils.getLocalizedPathname('/scenes/overview/', isZhCN, location.query)}>
-          <FormattedMessage id="app.header.menu.scenes" />
-        </Link>
-      </Menu.Item>
-      {/* <Menu.Item key="docs/resources">
+      <Menu.Item key="docs/resources">
         <Link to={utils.getLocalizedPathname('/docs/resources', isZhCN, location.query)}>
           <FormattedMessage id="app.header.menu.resource" />
         </Link>
-      </Menu.Item> */}
-      {/* {showTechUIButton && (
+      </Menu.Item>
+      {showTechUIButton && (
         <Menu.Item key="tech-ui">
           <a href="https://techui.alipay.com" target="__blank" rel="noopener noreferrer">
             TechUI
           </a>
         </Menu.Item>
-      )} */}
-      {/* {isZhCN && !isGitee && (
+      )}
+      {isZhCN && !isGitee && (
         <Menu.Item key="mirror">
           <a href="https://ant-design.gitee.io">国内镜像</a>
         </Menu.Item>
-      )} */}
-      {/* {additional} */}
+      )}
+      {additional}
     </Menu>
   );
 };

@@ -242,15 +242,15 @@ export default class Layout extends React.Component {
             <meta name="description" content={description} />
             <meta property="og:title" content={title} />
             <meta property="og:type" content="website" />
-            {/* <meta
+            <meta
               property="og:image"
               content="https://gw.alipayobjects.com/zos/rmsportal/rlpTLlbMzTNYuZGGCVYM.png"
-            /> */}
+            />
           </Helmet>
           <IntlProvider
             locale={appLocale.locale}
             messages={appLocale.messages}
-            defaultLocale="zh-CN"
+            defaultLocale="en-US"
           >
             <ConfigProvider
               locale={appLocale.locale === 'zh-CN' ? zhCN : null}

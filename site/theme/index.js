@@ -35,15 +35,6 @@ module.exports = {
         meta: markdownData.meta,
       };
     },
-    scenes(markdownData) {
-        const { filename } = markdownData.meta;
-        if (!/^scenes/.test(filename) || /[/\\]demo$/.test(path.dirname(filename))) {
-          return null;
-        }
-        return {
-          meta: markdownData.meta,
-        };
-      },
     changelog(markdownData) {
       if (/CHANGELOG/.test(markdownData.meta.filename)) {
         return {
@@ -109,10 +100,6 @@ module.exports = {
       {
         path: 'docs/resources-cn',
         component: resourcesTmpl,
-      },
-      {
-        path: 'scenes/:children/',
-        component: contentTmpl,
       },
     ],
   },

@@ -1,8 +1,8 @@
 {
-  "name": "eazytec-ui",
-  "version": "1.0.0",
-  "description": "基于antd的封装",
-  "title": "Eazytec Ui",
+  "name": "antd",
+  "version": "4.12.3",
+  "description": "An enterprise-class UI design language and React components implementation",
+  "title": "Ant Design",
   "keywords": [
     "ant",
     "component",
@@ -14,13 +14,13 @@
     "react-component",
     "ui"
   ],
-  "homepage": "https://github.com/zongzheng123/eazytec-ui",
+  "homepage": "https://ant.design",
   "bugs": {
-    "url": "https://github.com/zongzheng123/eazytec-ui/issues"
+    "url": "https://github.com/ant-design/ant-design/issues"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/zongzheng123/eazytec-ui"
+    "url": "https://github.com/ant-design/ant-design"
   },
   "license": "MIT",
   "contributors": [

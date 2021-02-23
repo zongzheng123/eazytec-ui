@@ -29,10 +29,9 @@ function alertBabelConfig(rules) {
 
 module.exports = {
   port: 8001,
-  hash: false,
+  hash: true,
   source: {
     components: './components',
-    scenes: './scenes',
     docs: './docs',
     changelog: ['CHANGELOG.zh-CN.md', 'CHANGELOG.en-US.md'],
     'components/form/v3': ['components/form/v3.zh-CN.md', 'components/form/v3.en-US.md'],
@@ -108,7 +107,6 @@ module.exports = {
     return config;
   },
 
-  
   devServerConfig: {
     public: process.env.DEV_HOST || 'localhost',
     disableHostCheck: !!process.env.DEV_HOST,
