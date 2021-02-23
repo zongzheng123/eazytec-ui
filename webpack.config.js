@@ -118,7 +118,7 @@ if (process.env.RUN_ENV === 'PRODUCTION') {
 
   processWebpackThemeConfig(webpackDarkConfig, 'dark', darkVars);
   processWebpackThemeConfig(webpackCompactConfig, 'compact', compactVars);
-  processWebpackThemeConfig(webpackCompactConfig, 'eazytec', eazytecVars);
+  processWebpackThemeConfig(webpackEazytecConfig, 'eazytec', eazytecVars);
 }
 
 module.exports = [...webpackConfig, ...webpackDarkConfig, ...webpackCompactConfig, ...webpackEazytecConfig];

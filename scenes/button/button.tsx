@@ -4,13 +4,13 @@ import classNames from 'classnames';
 import omit from 'rc-util/lib/omit';
 
 import Group from './button-group';
-import { ConfigContext } from '../config-provider';
-import Wave from '../_util/wave';
-import { Omit, tuple } from '../_util/type';
-import devWarning from '../_util/devWarning';
-import SizeContext, { SizeType } from '../config-provider/SizeContext';
+import { ConfigContext } from '../../components/config-provider';
+import Wave from '../../components/_util/wave';
+import { Omit, tuple } from '../../components/_util/type';
+import devWarning from '../../components/_util/devWarning';
+import SizeContext, { SizeType } from '../../components/config-provider/SizeContext';
 import LoadingIcon from './LoadingIcon';
-import { cloneElement } from '../_util/reactNode';
+import { cloneElement } from '../../components/_util/reactNode';
 
 const rxTwoCNChar = /^[\u4e00-\u9fa5]{2}$/;
 const isTwoCNChar = rxTwoCNChar.test.bind(rxTwoCNChar);

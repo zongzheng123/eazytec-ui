@@ -3,9 +3,15 @@ function pascalCase(name) {
   return name.charAt(0).toUpperCase() + name.slice(1).replace(/-(\w)/g, (m, n) => n.toUpperCase());
 }
 
+// const Components = require('./components')
+// const Scenes = require('./scenes')
+
+// console.log(11111111)
+// console.dir(Scenes)
+
 // Just import style for https://github.com/ant-design/ant-design/issues/3745
 const componentReq = require.context('./components', true, /^\.\/[^_][\w-]+\/style\/index\.tsx?$/);
-const scenesReq = require.context('./scenes', true, /^\.\/[^_][\w-]+\/style\/index\.tsx?$/);
+// const scenesReq = require.context('./scenes', true, /^\.\/[^_][\w-]+\/style\/index\.tsx?$/);
 
 componentReq.keys().forEach(mod => {
   let v = componentReq(mod);
@@ -23,21 +29,17 @@ componentReq.keys().forEach(mod => {
   }
 });
 
-scenesReq.keys().forEach(mod => {
-    let v = scenesReq(mod);
-    if (v && v.default) {
-      v = v.default;
-    }
-    const match = mod.match(/^\.\/([^_][\w-]+)\/index\.tsx?$/);
-    if (match && match[1]) {
-        exports[pascalCase(match[1])] = v
-    }
-  });
+// scenesReq.keys().forEach(mod => {
+//     let v = scenesReq(mod);
+//     if (v && v.default) {
+//       v = v.default;
+//     }
+//     const match = mod.match(/^\.\/([^_][\w-]+)\/index\.tsx?$/);
+//     if (match && match[1]) {
+//         exports[pascalCase(match[1])] = v
+//     }
+//   });
 
-const Components = require('./components')
-const Scenes = require('./scenes')
 
-module.exports = {
-    ...Components,
-    ...Scenes,
-};
+
+module.exports =  require('./components');
